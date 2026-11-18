@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unidos Rolamentos · Escala 5x2 de 40h</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- ============ CAPA ============ -->
+<div id="cover" class="cover">
+  <div class="cv-glow"></div>
+  <header class="cv-nav">
+    <a href="#inicio" class="cv-logo"><img src="assets/logo.png" alt="Unidos Rolamentos"></a>
+    <nav class="cv-links">
+      <a href="#dimensionamento">Dimensionamento</a>
+      <a href="#escala">Grade</a>
+      <a href="#riscos">Riscos</a>
+      <a href="#melhorias">Melhorias</a>
+    </nav>
+    <a href="#dimensionamento" class="cv-btn cv-btn-sm">Acessar painel <span>→</span></a>
+  </header>
+
+  <main class="cv-hero">
+    <div class="cv-left">
+      <span class="cv-chip rv" style="--d:0"><i></i>Projeto de jornada · EC 141/2026</span>
+      <h1 class="cv-h rv" style="--d:1">Nova escala 5x2<br><span>de 40 horas.</span></h1>
+      <p class="cv-sub rv" style="--d:2">Duas folgas por semana para os 7 colaboradores da Unidos Rolamentos, com a loja coberta de segunda a sábado e sem novas contratações.</p>
+      <div class="cv-actions rv" style="--d:3">
+        <a href="#dimensionamento" class="cv-btn">Acessar painel <span>→</span></a>
+        <a href="#escala" class="cv-play"><b>▶</b><span>Ver grade e simulador<small>ciclo A/B · trocas</small></span></a>
+      </div>
+      <div class="cv-stats rv" style="--d:4">
+        <div><b>40h00</b><span>por colaborador</span></div>
+        <div><b>2</b><span>folgas por semana</span></div>
+        <div><b>7</b><span>pessoas · 0 contratações</span></div>
+        <div><b id="cvGaps">0</b><span>lacunas de cobertura</span></div>
+      </div>
+    </div>
+
+    <div class="cv-stage" id="cvStage">
+      <svg class="cv-svg" viewBox="-380 -330 760 660" aria-hidden="true">
+        <defs>
+          <radialGradient id="gBall" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#e4e5e7"/><stop offset="1" stop-color="#8d8f93"/></radialGradient>
+          <linearGradient id="gOuter" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9dadc"/><stop offset=".5" stop-color="#a7a9ac"/><stop offset="1" stop-color="#7e8084"/></linearGradient>
+          <linearGradient id="gInner" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffa451"/><stop offset="1" stop-color="#e06a0b"/></linearGradient>
+          <linearGradient id="gRib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff9a3c"/><stop offset=".5" stop-color="#f5821f"/><stop offset="1" stop-color="#d9650a"/></linearGradient>
+          <radialGradient id="gHub" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ecebe8"/></radialGradient>
+          <path id="rib" d="M -340 0 A 340 92 0 1 0 340 0 A 340 92 0 1 0 -340 0"/>
+          <clipPath id="cTop"><rect x="-420" y="-200" width="840" height="200"/></clipPath>
+          <clipPath id="cBot"><rect x="-420" y="0" width="840" height="200"/></clipPath>
+          <filter id="fSh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#5a3a1a" flood-opacity=".18"/></filter>
+        </defs>
+        <g transform="rotate(-14)"><g clip-path="url(#cTop)" class="ribbon">
+          <use href="#rib" fill="none" stroke="url(#gRib)" stroke-width="34" opacity=".75"/>
+          <text class="ribtxt"><textPath href="#rib" class="tp"></textPath></text>
+        </g></g>
+        <g filter="url(#fSh)">
+          <circle r="222" fill="none" stroke="url(#gOuter)" stroke-width="40"/>
+          <circle r="200" fill="none" stroke="#231f20" stroke-opacity=".12" stroke-width="2"/>
+          <g id="cage"></g>
+          <g id="inner">
+            <circle r="120" fill="none" stroke="url(#gInner)" stroke-width="34"/>
+            <circle r="120" fill="none" stroke="#ffffff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 14"/>
+          </g>
+          <circle r="100" fill="url(#gHub)" stroke="#231f20" stroke-opacity=".08"/>
+          <text y="8" text-anchor="middle" class="hub-n">40h</text>
+          <text y="40" text-anchor="middle" class="hub-l">POR SEMANA</text>
+        </g>
+        <g transform="rotate(-14)"><g clip-path="url(#cBot)" class="ribbon">
+          <use href="#rib" fill="none" stroke="url(#gRib)" stroke-width="34"/>
+          <text class="ribtxt"><textPath href="#rib" class="tp"></textPath></text>
+        </g></g>
+      </svg>
+
+      <a href="#escala" class="cv-card c1" data-depth="18">
+        <span class="ic">⇄</span><div><b>Ciclo A/B</b><small>Sábado sim, sábado não, com folga no meio da semana</small></div><em>→</em>
+      </a>
+      <a href="#escala" class="cv-card c2" data-depth="28">
+        <span class="ic">◷</span><div><b id="cvSatT">Próximo sábado</b><small id="cvSat">—</small></div><em>→</em>
+      </a>
+      <a href="#riscos" class="cv-card c3" data-depth="14">
+        <span class="ic">!</span><div><b>Intervalo de 40 min</b><small>Depende de acordo coletivo</small></div><em>→</em>
+      </a>
+      <div class="cv-hint">passe o mouse para acelerar o rolamento</div>
+    </div>
+  </main>
+
+  <a href="#melhorias" class="cv-band rv" style="--d:5">
+    <div class="cv-band-l"><span class="cv-band-k">Implantação</span><b>8 semanas</b></div>
+    <div class="cv-band-m">Norma coletiva <i>·</i> Polivalência <i>·</i> Piloto A/B <i>·</i> Revisão</div>
+    <span class="cv-arrow">↗</span>
+  </a>
+</div>
+
+<div class="wrap" id="panel">
+<header class="top">
+  <div>
+    <h1>Unidos Rolamentos · Escala 5x2 de 40 horas</h1>
+    <div class="sub">7 colaboradores · 2 folgas por semana · intervalo de 40 min · sem contratações</div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><a href="#inicio" class="badge" style="text-decoration:none;color:var(--ink)">← Capa</a><span class="badge">Ciclo de 2 semanas (A/B) · Loja aberta 51h30/sem</span></div>
+</header>
+
+<nav class="tabs" id="tabs">
+  <a href="#dimensionamento"><span>01</span>Dimensionamento</a>
+  <a href="#escala"><span>02</span>Grade e simulador</a>
+  <a href="#riscos"><span>03</span>Riscos</a>
+  <a href="#melhorias"><span>04</span>Melhorias de processo</a>
+</nav>
+
+<!-- ============ 1. DIMENSIONAMENTO ============ -->
+<section class="view" id="v-dimensionamento">
+  <h2>1. Dimensionamento matemático</h2>
+  <p class="lead">A loja fica aberta 51h30 por semana e cada pessoa trabalha 40h. Ninguém consegue cobrir o horário inteiro sozinho, então a escala combina turnos defasados com um rodízio de sábados em ciclo de duas semanas.</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">51h30</div><div class="l">Horas de loja aberta por semana</div></div>
+    <div class="kpi"><div class="v">280h</div><div class="l">Capacidade da equipe (7 × 40h)</div></div>
+    <div class="kpi"><div class="v">12h</div><div class="l">Demanda de sábado (3 pessoas × 4h)</div></div>
+    <div class="kpi"><div class="v">5,6</div><div class="l">Pessoas em média na loja por dia útil</div></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Capacidade × demanda</h3>
+      <table>
+        <tr><th>Item</th><th>Cálculo</th><th class="num">Total</th></tr>
+        <tr><td>Seg a Sex</td><td class="mono">08:00–17:30 = 9h30 × 5</td><td class="num">47h30</td></tr>
+        <tr><td>Sábado</td><td class="mono">08:00–12:00</td><td class="num">4h00</td></tr>
+        <tr><td><b>Loja aberta</b></td><td></td><td class="num"><b>51h30</b></td></tr>
+        <tr><td>Equipe</td><td class="mono">7 × 40h</td><td class="num">280h</td></tr>
+        <tr><td>Consumo no sábado</td><td class="mono">3 × 4h</td><td class="num">12h</td></tr>
+        <tr><td>Sobra para dias úteis</td><td class="mono">268h ÷ 5 dias</td><td class="num">53,6h/dia</td></tr>
+        <tr><td>Cobertura média simultânea</td><td class="mono">53,6h ÷ 9,5h</td><td class="num">≈ 5,6 pessoas</td></tr>
+      </table>
+      <p style="font-size:13.5px;color:var(--muted);margin-bottom:0">Hoje, na 6x1 com 44h, a equipe soma 308h. A mudança tira 28h por semana (−9,1%). Por isso a cobertura depende de defasar os turnos e de ter gente que cubra mais de uma função.</p>
+    </div>
+
+    <div class="card">
+      <h3>Por que existem dois tipos de semana</h3>
+      <div class="eq">Semana SEM sábado (folgas: sáb + dom)
+5 dias × 8h = 40h ✓
+permanência diária = 8h + 0h40 = 8h40</div>
+      <div class="eq">Semana COM sábado (folgas: dom + 1 dia útil)
+4 dias × J + 4h (sáb) = 40h  →  J = 9h
+permanência diária = 9h + 0h40 = 9h40</div>
+      <div class="eq">Alternativas descartadas
+5 × 8h + 4h sáb = 44h  → 4h extras e só 1 folga ✗
+4 × 8h + 4h sáb = 36h  → faltam 4h na meta ✗</div>
+      <p style="font-size:13.5px;margin:6px 0 0">Assim, cada pessoa fecha <b>exatamente 40h em todas as semanas</b>, sem precisar de banco de horas. As 9h diárias das semanas com sábado são uma compensação dentro da própria semana (veja os riscos).</p>
+    </div>
+  </div>
+
+  <h3>Catálogo de turnos</h3>
+  <div class="card scroll">
+    <table>
+      <tr><th>Código</th><th>Turno</th><th>Entrada</th><th>Intervalo</th><th>Saída</th><th class="num">Permanência</th><th class="num">Trabalho</th><th>Uso</th></tr>
+      <tr><td class="mono"><b>T1</b></td><td>Abertura padrão</td><td class="mono">08:00</td><td class="mono">40 min</td><td class="mono">16:40</td><td class="num">8h40</td><td class="num">8h00</td><td>Semana sem sábado; abre a loja</td></tr>
+      <tr><td class="mono"><b>T2</b></td><td>Fechamento padrão</td><td class="mono">08:50</td><td class="mono">40 min</td><td class="mono">17:30</td><td class="num">8h40</td><td class="num">8h00</td><td>Semana sem sábado; fecha a loja</td></tr>
+      <tr><td class="mono"><b>TL</b></td><td>Longo · abertura</td><td class="mono">07:50</td><td class="mono">40 min</td><td class="mono">17:30</td><td class="num">9h40</td><td class="num">9h00</td><td>Semana com sábado; 10 min de preparação antes de abrir</td></tr>
+      <tr><td class="mono"><b>TLF</b></td><td>Longo · fechamento</td><td class="mono">08:00</td><td class="mono">40 min</td><td class="mono">17:40</td><td class="num">9h40</td><td class="num">9h00</td><td>Opção para caixa: 10 min de fechamento após as 17:30</td></tr>
+      <tr><td class="mono"><b>SAB</b></td><td>Sábado</td><td class="mono">08:00</td><td class="mono">—</td><td class="mono">12:00</td><td class="num">4h00</td><td class="num">4h00</td><td>Até 4h não exige intervalo (CLT, art. 71, §1º)</td></tr>
+    </table>
+  </div>
+
+  <h3>Verificações legais do desenho</h3>
+  <div class="card scroll">
+    <table>
+      <tr><th>Regra</th><th>Base</th><th>No modelo</th><th>Status</th></tr>
+      <tr><td>Jornada semanal</td><td>Meta de 40h (EC 141/2026)</td><td class="mono">40h00 para todos, nas semanas A e B</td><td><span class="pill ok">OK</span></td></tr>
+      <tr><td>Limite diário com compensação</td><td>Art. 59: até 2h além de 8h</td><td class="mono">máx. 9h00</td><td><span class="pill ok">OK</span></td></tr>
+      <tr><td>Interjornada mínima 11h</td><td>Art. 66</td><td class="mono">menor: Sex 17:30 → Sáb 08:00 = 14h30</td><td><span class="pill ok">OK</span></td></tr>
+      <tr><td>DSR + interjornada (35h)</td><td>Art. 67; Súmula 110 TST</td><td class="mono">Sáb 12:00 → Seg 07:50 = 43h50</td><td><span class="pill ok">OK</span></td></tr>
+      <tr><td>Duas folgas semanais</td><td>Modelo 5x2</td><td class="mono">Domingo + sábado ou 1 dia útil</td><td><span class="pill ok">OK</span></td></tr>
+      <tr><td>Intervalo de 40 min</td><td>Art. 71 (mínimo 1h) / art. 611-A, III</td><td class="mono">Só vale com ACT ou CCT</td><td><span class="pill warn">Depende de norma coletiva</span></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 2. ESCALA ============ -->
+<section class="view" id="v-escala">
+  <h2>2. Grade de revezamento e simulador de cobertura</h2>
+  <p class="lead">Ciclo de 2 semanas. Na <b>Semana A</b>, trabalham no sábado Caixa 1, Balconista 1 e Balconista 2. Na <b>Semana B</b>, Caixa 2, Balconista 3 e Apoio. O Estoquista não trabalha aos sábados porque não há recebimento. Todas as células podem ser editadas, e as horas, folgas e a cobertura são recalculadas na hora.</p>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="toolbar">
+    <div class="seg" id="weekSeg"><button data-w="A">Semana A</button><button data-w="B">Semana B</button></div>
+    <button class="btn primary" id="btnSwap">⇄ Trocar escala</button>
+    <button class="btn" id="btnCopy">Copiar grade (Excel)</button>
+    <button class="btn" id="btnReset">Restaurar modelo</button>
+    <span class="toast" id="toast"></span>
+  </div>
+  <textarea id="copybox" readonly></textarea>
+  <div class="card" id="histCard" style="display:none;margin-bottom:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+      <h3 style="margin:0">Histórico de trocas</h3>
+      <button class="btn" id="btnUndo">↶ Desfazer última troca</button>
+    </div>
+    <ul class="diag" id="hist" style="margin-top:8px"></ul>
+  </div>
+
+  <div class="modal-bg" id="swapModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-labelledby="swapTitle">
+      <div class="modal-h"><h3 id="swapTitle" style="margin:0">⇄ Trocar escala</h3><button class="x" id="swapClose" aria-label="Fechar">×</button></div>
+      <div class="frm">
+        <label>Semana<select id="swW"><option value="A">Semana A</option><option value="B">Semana B</option><option value="AB">Semanas A e B</option></select></label>
+        <label>O que trocar<select id="swMode"><option value="semana">Semana inteira: sábado, folga e turnos (mantém 40h)</option><option value="dia">Um dia específico (pode alterar as horas)</option></select></label>
+        <label id="swDayL">Dia<select id="swDay"></select></label>
+        <label>Colaborador 1<select id="swP1"></select></label>
+        <label>Colaborador 2<select id="swP2"></select></label>
+        <label>Motivo (opcional)<input type="text" id="swMot" placeholder="ex.: consulta médica, pedido do colaborador"></label>
+      </div>
+      <div id="swPrev"></div>
+      <div class="modal-f"><button class="btn" id="swCancel">Cancelar</button><button class="btn primary" id="swOk">Confirmar troca</button></div>
+    </div>
+  </div>
+
+  <div class="card scroll">
+    <table class="escala" id="grid"></table>
+    <div class="legend">
+      <span><code>T1</code> 08:00–16:40</span><span><code>T2</code> 08:50–17:30</span><span><code>TL</code> 07:50–17:30</span><span><code>TLF</code> 08:00–17:40</span><span><code>SAB</code> 08:00–12:00</span><span><code>F</code> folga</span><span>“Cobre caixa” = polivalente que assume o caixa quando nenhum caixa está presente</span>
+    </div>
+  </div>
+
+  <h3>Linha do tempo do dia</h3>
+  <div class="toolbar">
+    <div class="seg" id="daySeg"></div>
+    <div class="params">
+      <span>Pico 1 <input type="text" id="p1a"> – <input type="text" id="p1b"></span>
+      <span>Pico 2 <input type="text" id="p2a"> – <input type="text" id="p2b"></span>
+      <span>Balcão mín. no pico <input type="number" min="0" max="5" id="pkMin"></span>
+      <span>fora do pico <input type="number" min="0" max="5" id="baseMin"></span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="axis" id="axis"></div>
+    <div class="tl" id="timeline"></div>
+    <div class="legend" style="margin-top:12px">
+      <span><span class="dot" style="background:var(--ok)"></span>Cobertura atendida</span>
+      <span><span class="dot" style="background:var(--warn)"></span>Caixa coberto por polivalente</span>
+      <span><span class="dot" style="background:var(--gap)"></span>Abaixo do mínimo</span>
+      <span>Faixa escura embaixo = horário de pico · listras = intervalo</span>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:16px">
+    <div class="card">
+      <h3>Diagnóstico do ciclo (Semanas A + B)</h3>
+      <ul class="diag" id="diag"></ul>
+    </div>
+    <div class="card">
+      <h3>Calendário de sábados</h3>
+      <div class="params" style="margin-bottom:10px"><span>1º sábado do ciclo (Semana A) <input type="date" id="calStart" style="width:150px"></span></div>
+      <div class="cal" id="cal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. RISCOS ============ -->
+<section class="view" id="v-riscos">
+  <h2>3. Riscos da transição</h2>
+  <p class="lead">Contexto: <a href="https://meutudo.com.br/blog/?p=293795">a EC 141/2026, que extingue a escala 6x1, foi promulgada em 16/10/2026, e a transição começa em 16/12/2026</a>. <a href="https://www.diariodepernambuco.com.br/politica/2026/08/11722392-relator-da-pec-da-escala-6x1-no-senado-mantem-texto-aprovado-na-camara.html">O texto prevê limite de 42h dois meses após a publicação e de 40h após um ano</a>. Adotar 40h agora antecipa o fim da transição. As exceções para categorias específicas ainda dependem de regulamentação. Confirme o texto final antes de formalizar.</p>
+
+  <div class="grid2">
+  <div>
+    <h3>Jurídicos</h3>
+    <div class="risk alto"><h4>Intervalo de 40 minutos <span class="pill gap">Alto</span></h4>
+      <p>O art. 71 da CLT exige no mínimo 1h de intervalo em jornadas acima de 6h. A redução para no mínimo 30 min só vale por <b>acordo ou convenção coletiva</b> (art. 611-A, III). A via do MTE (art. 71, §3º) exige refeitório e proíbe horas suplementares, o que entra em conflito com os dias de 9h.</p>
+      <p class="mit"><b>Sem norma coletiva:</b> os 20 min suprimidos por dia são pagos como indenização com adicional de 50% (art. 71, §4º). <b>Mitigação:</b> negociar um ACT com o sindicato dos comerciários ou verificar se a CCT vigente já autoriza a redução.</p>
+    </div>
+    <div class="risk medio"><h4>Dias de 9h nas semanas com sábado <span class="pill warn">Médio</span></h4>
+      <p>São uma compensação de jornada: a 9ª hora de segunda a sexta paga o sábado. Exige <b>acordo de compensação por escrito</b> (art. 59, §6º, para compensação no mesmo mês; Súmula 85 do TST) e o respeito ao teto de 10h por dia.</p>
+      <p class="mit"><b>Mitigação:</b> termo aditivo individual com a escala anexada e conferência com a CCT local, que pode exigir forma específica ou vedar o regime.</p>
+    </div>
+    <div class="risk medio"><h4>Alteração contratual e salário <span class="pill warn">Médio</span></h4>
+      <p>Reduzir de 44h para 40h <b>sem reduzir o salário</b> é obrigatório (CF, art. 7º, VI; art. 468 CLT). O divisor passa de 220 para 200, então o valor-hora sobe cerca de 10%, assim como horas extras, faltas e DSR calculados sobre ele. Mudar o horário de entrada (07:50) exige concordância e não pode trazer prejuízo.</p>
+      <p class="mit"><b>Mitigação:</b> termo aditivo assinado, parametrização do divisor 200 na folha e comunicação prévia.</p>
+    </div>
+    <div class="risk medio"><h4>Prova de jornada <span class="pill warn">Médio</span></h4>
+      <p>Com 7 empregados, o ponto não é obrigatório (art. 74, §2º, só acima de 20). Sem registro, porém, a empresa não consegue provar o intervalo, a compensação nem os 10 min de abertura e fechamento, que contam como tempo à disposição (arts. 4º e 58, §1º).</p>
+      <p class="mit"><b>Mitigação:</b> ponto eletrônico simples por aplicativo ou ponto por exceção via acordo (art. 74, §4º).</p>
+    </div>
+    <div class="risk baixo"><h4>Horas extras habituais <span class="pill ok">Baixo</span></h4>
+      <p>Atendimentos que passam das 17:30 geram hora extra a 50% sobre o divisor 200. Se viram rotina, aumentam o custo e criam passivo.</p>
+      <p class="mit"><b>Mitigação:</b> regra de “última venda às 17:20” e fechamento de caixa dentro do turno (TLF).</p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>Calculadora rápida de impacto</h3>
+      <div class="params" style="margin-bottom:8px"><span>Salário médio (R$) <input type="number" id="sal" value="2000" style="width:100px"></span><span>Dias úteis/mês <input type="number" id="du" value="22"></span></div>
+      <table id="calcT"></table>
+    </div>
+  </div>
+
+  <div>
+    <h3>Operacionais</h3>
+    <div class="risk alto"><h4>Caixa como ponto único de falha <span class="pill gap">Alto</span></h4>
+      <p>Na quarta-feira de cada semana há só um caixa (o outro está de folga), e a abertura ou o almoço dependem do Apoio. Uma falta nesse dia fecha o caixa.</p>
+      <p class="mit"><b>Mitigação:</b> formar dois polivalentes de caixa (Apoio e Balconista 3), adotar PIX/maquininha no balcão e manter a quarta como dia de menor movimento.</p>
+    </div>
+    <div class="risk alto"><h4>Capacidade sem folga (férias e atestados) <span class="pill gap">Alto</span></h4>
+      <p>São 7 pessoas × 30 dias de férias, ou seja, cerca de 210 dias por ano com alguém fora, sem contar atestados. A grade não tem reserva: qualquer ausência quebra o rodízio de sábado ou a cobertura.</p>
+      <p class="mit"><b>Mitigação:</b> férias na baixa temporada, fracionadas (art. 134, §1º), uma pessoa por vez e nunca os dois caixas no mesmo mês. Banco de horas para cobrir sábados durante as férias.</p>
+    </div>
+    <div class="risk medio"><h4>Sábado com 3 pessoas e sem estoquista <span class="pill warn">Médio</span></h4>
+      <p>Equipe enxuta para o pico das oficinas no sábado de manhã e ninguém dedicado à separação de mercadorias.</p>
+      <p class="mit"><b>Mitigação:</b> pedidos de sábado separados na sexta à tarde, pré-venda pelo WhatsApp e Apoio cobrindo o estoque.</p>
+    </div>
+    <div class="risk medio"><h4>Fadiga nos dias de 9h40 <span class="pill warn">Médio</span></h4>
+      <p>Quatro dias longos seguidos de sábado podem reduzir a produtividade no fim da tarde e aumentar erros de separação.</p>
+      <p class="mit"><b>Mitigação:</b> alternância A/B (no máximo uma semana longa a cada duas) e a folga do dia útil no meio da semana para quebrar a sequência.</p>
+    </div>
+    <div class="risk medio"><h4>Resistência e percepção de injustiça <span class="pill warn">Médio</span></h4>
+      <p>Pessoas na semana longa podem comparar com colegas em T1/T2, e o Estoquista nunca trabalha aos sábados.</p>
+      <p class="mit"><b>Mitigação:</b> calendário publicado com 60 dias de antecedência, regras de troca entre pares da mesma função e revisão trimestral.</p>
+    </div>
+    <div class="risk baixo"><h4>Recebimento de mercadoria fora de janela <span class="pill ok">Baixo</span></h4>
+      <p>Entregas no fim da tarde, depois das 16:40, quando o Estoquista já saiu.</p>
+      <p class="mit"><b>Mitigação:</b> agendar recebimento com fornecedores das 08:30 às 15:30.</p>
+    </div>
+  </div>
+  </div>
+  <div class="note">Este material não substitui parecer jurídico. Antes de implantar, valide com o advogado trabalhista e com a CCT dos comerciários aplicável à base territorial da loja.</div>
+</section>
+
+<!-- ============ 4. MELHORIAS ============ -->
+<section class="view" id="v-melhorias">
+  <h2>4. Melhorias de processo · Teoria das Restrições</h2>
+  <p class="lead">Com 9% menos horas e o mesmo quadro, a produtividade por hora precisa subir. Os cinco passos da TOC orientam onde investir esforço.</p>
+
+  <div class="card">
+    <div class="step"><div class="n">1</div><div><b>Identificar a restrição</b>
+      <ul><li><b>Caixa:</b> é um recurso único em parte do dia (quartas, abertura e almoço). Fila no caixa trava o balcão.</li>
+      <li><b>Separação no balcão:</b> rolamentos têm milhares de códigos equivalentes, e procurar a peça consome mais tempo do que atender.</li></ul></div></div>
+    <div class="step"><div class="n">2</div><div><b>Explorar a restrição (tirar o máximo dela sem custo)</b>
+      <ul><li>Pagamento no balcão com maquininha ou PIX dinâmico na mão do balconista. O caixa vira conferência e faturamento.</li>
+      <li>Tabela de equivalências (SKF/NSK/FAG/NTN/Timken) e busca por medida no sistema ao alcance do balcão.</li>
+      <li>Curva ABC com endereçamento: os itens A ficam a poucos passos do balcão.</li></ul></div></div>
+    <div class="step"><div class="n">3</div><div><b>Subordinar tudo à restrição</b>
+      <ul><li>Almoços escalonados conforme a grade, para que o caixa e o balcão nunca saiam juntos.</li>
+      <li>Recebimento agendado das 08:30 às 15:30. Reposição e inventário nos vales do dia, nunca no pico.</li>
+      <li>Orçamentos por WhatsApp com separação antecipada: o cliente chega e só retira.</li></ul></div></div>
+    <div class="step"><div class="n">4</div><div><b>Elevar a restrição</b>
+      <ul><li>Matriz de polivalência (abaixo): todos com nível mínimo em duas funções.</li>
+      <li>Kits pré-montados dos itens mais pedidos (rolamento + retentor + graxa) e venda por lista para oficinas fidelizadas.</li>
+      <li>Banco de horas semestral (art. 59, §5º) para picos sazonais, em vez de hora extra.</li></ul></div></div>
+    <div class="step"><div class="n">5</div><div><b>Medir e repetir</b>
+      <ul><li>Indicadores semanais: fila no caixa, tempo médio de atendimento, vendas por hora × pessoas por hora, rupturas de separação.</li>
+      <li>Ajustar a grade a cada trimestre pelo mapa de calor real de vendas por faixa horária.</li></ul></div></div>
+  </div>
+
+  <h3>Matriz de polivalência · meta para 90 dias</h3>
+  <div class="card scroll">
+    <table>
+      <tr><th>Colaborador</th><th style="text-align:center">Caixa</th><th style="text-align:center">Balcão</th><th style="text-align:center">Estoque</th><th>Plano de treinamento</th></tr>
+      <tr><td>Caixa 1</td><td class="lvl l3">3</td><td class="lvl l1">1</td><td class="lvl l0">0</td><td>Consulta de preço e equivalência no balcão</td></tr>
+      <tr><td>Caixa 2</td><td class="lvl l3">3</td><td class="lvl l1">1</td><td class="lvl l0">0</td><td>Consulta de preço e equivalência no balcão</td></tr>
+      <tr><td>Balconista 1</td><td class="lvl l1">1</td><td class="lvl l3">3</td><td class="lvl l1">1</td><td>Recebimento PIX/maquininha no balcão</td></tr>
+      <tr><td>Balconista 2</td><td class="lvl l1">1</td><td class="lvl l3">3</td><td class="lvl l1">1</td><td>Recebimento PIX/maquininha no balcão</td></tr>
+      <tr><td>Balconista 3</td><td class="lvl l2">2</td><td class="lvl l3">3</td><td class="lvl l1">1</td><td><b>2º backup de caixa</b>: abertura, sangria, fechamento</td></tr>
+      <tr><td>Estoquista</td><td class="lvl l0">0</td><td class="lvl l2">2</td><td class="lvl l3">3</td><td>Atendimento de balcão nos picos</td></tr>
+      <tr><td>Apoio</td><td class="lvl l3">3</td><td class="lvl l2">2</td><td class="lvl l2">2</td><td><b>1º backup de caixa</b>: domínio completo do PDV</td></tr>
+    </table>
+    <div class="legend"><span>0 = não atua</span><span>1 = executa com apoio</span><span>2 = executa sozinho</span><span>3 = referência, ensina</span></div>
+  </div>
+
+  <h3>Plano de implantação</h3>
+  <div class="card scroll">
+    <table>
+      <tr><th>Quando</th><th>Ação</th><th>Responsável</th></tr>
+      <tr><td class="mono">Sem. 1–2</td><td>Checar a CCT; negociar ACT do intervalo de 40 min e da compensação; parecer jurídico</td><td>DP + Jurídico</td></tr>
+      <tr><td class="mono">Sem. 2–3</td><td>Mapa de vendas por hora (últimos 90 dias) para validar os horários de pico no simulador</td><td>Gestão + Sistemas</td></tr>
+      <tr><td class="mono">Sem. 3–6</td><td>Treinar polivalência (Apoio e Balconista 3 no caixa); maquininha no balcão</td><td>Gerência</td></tr>
+      <tr><td class="mono">Sem. 5</td><td>Termos aditivos, divisor 200 na folha, ponto eletrônico, comunicação a clientes e fornecedores</td><td>DP</td></tr>
+      <tr><td class="mono">Sem. 7–8</td><td>Piloto de 2 ciclos (A/B) com medição diária de fila e horas</td><td>Gerência</td></tr>
+      <tr><td class="mono">Mês 3</td><td>Revisão da grade e ajuste fino de turnos e almoços</td><td>Gestão + DP</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>Modelo de referência · Unidos Rolamentos · Parâmetros: Seg–Sex 08:00–17:30, Sáb 08:00–12:00, intervalo de 40 min, 7 colaboradores, 40h semanais. As alterações feitas no simulador ficam salvas só neste navegador.</footer>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
